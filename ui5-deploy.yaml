@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.4"
+metadata:
+  name: com.smod.ux.lib
+type: library
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          url: http://fioritest.sedefshipyard.com:8000
+          client: "100"
+        app:
+          name: ZSMOD_UX_LIB_V2
+          description: SMOD UX Lib v2 - 2023
+          package: ZHR
+          transport: SFDK900214

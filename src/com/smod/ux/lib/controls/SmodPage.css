@@ -1,0 +1,824 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700|Roboto+Condensed:300,400,700|Roboto:300,400,700');
+.smod-page {
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    position: relative;
+}
+
+.smod-page-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 45px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(16, 16, 16, 0.28);
+    z-index: 2;
+}
+
+.smod-page-sidebar-pinned .smod-page-overlay {
+    display: none;
+}
+
+.smod-side-bar-action-menu {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.smod-side-bar-action-menu:hover {
+    background-color: #c94739;
+}
+
+.smod-page-header {
+    overflow: hidden;
+    position: fixed;
+    /* border-bottom: 1px solid #394c5b; */
+    z-index: 4;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    background-color: #3b4c5b;
+    color: whitesmoke;
+}
+
+.smod-page-header-title {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    width: calc(100% - 92px);
+    height: 45px;
+}
+
+.smod-page-sidebar-active .smod-page-brand-container {
+    height: 45px;
+    display: block;
+    position: sticky;
+    top: 0;
+}
+
+.smod-page-sidebar-pinned .smod-page-brand-container {
+    display: none;
+}
+
+.smod-page-brand-container {
+    display: none;
+}
+
+.smod-page-brand-image {
+    width: calc(100% - 90px);
+    float: left;
+    height: 45px;
+    background-color: #3b4c5b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smod-page-button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: none;
+    display: inline-block;
+    padding: 5px 5px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: #3b4c5b;
+    color: whitesmoke;
+    width: 45px;
+    height: 45px;
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+    -o-transition: background-color 0.3s ease, color 0.3s ease;
+    -moz-transition: background-color 0.3s ease, color 0.3s ease;
+    -ms-transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.smod-page-toggle-button {
+    font-size: 20px;
+}
+
+.smod-page-close-button {
+    font-size: 20px;
+    float: right;
+    background-color: #c53c3c;
+    color: whitesmoke;
+}
+
+.smod-page-back-right-button {
+    float: right;
+    right: 10px;
+    font-size: 20px;
+    background-color: #24333e;
+}
+
+.smod-page-back-left-button {
+    float: left;
+    left: 10px;
+    font-size: 20px;
+    background-color: #24333e;
+}
+
+.smod-page-back-left-button:before,
+.smod-page-back-right-button:before {
+    content: "\e067";
+    font-family: "SAP-icons";
+}
+
+.smod-page-close-button:before {
+    content: "\e03e";
+    font-family: "SAP-icons";
+}
+
+.smod-page-toggle-button:before {
+    content: "\e1de";
+    font-family: "SAP-icons";
+}
+
+.smod-page-pin-button {
+    top: 45px;
+    position: absolute;
+    display: none;
+    z-index: 6;
+    visibility: hidden;
+    font-size: 15px;
+    background-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: none;
+    padding: 5px 5px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 30px;
+    height: 30px;
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+    -o-transition: background-color 0.3s ease, color 0.3s ease;
+    -moz-transition: background-color 0.3s ease, color 0.3s ease;
+    -ms-transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.smod-page-sidebar-pinned .smod-page-pin-button {
+    top: 0;
+}
+
+.smod-page-pin-active:hover {
+    color: whitesmoke;
+    background-color: #c94739;
+}
+
+.smod-page-pin-active {
+    /* background-color: whitesmoke; */
+    color: #c94739;
+}
+
+.smod-page-pin-inactive:hover {
+    color: whitesmoke;
+    background-color: #2c8e5c;
+}
+
+.smod-page-pin-inactive:hover::before {
+    animation: pinmoveeffect 1s ease-in-out infinite;
+}
+
+.smod-page-pin-inactive {
+    background-color: transparent;
+    color: #2c8e5c;
+}
+
+.smod-page-pin-button:before {
+    content: "\e0a0";
+    font-family: "SAP-icons";
+}
+
+.smod-page-pin-button.smod-page-pin-active:before {
+    display: inline-block;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.smod-page-sidebar-active:hover .smod-page-pin-button {
+    display: block;
+    visibility: visible;
+    right: 0;
+    animation: animatepin 0.2s forwards;
+}
+
+.smod-page-back-left-button:hover,
+.smod-page-back-right-button:hover,
+.smod-page-toggle-button:hover {
+    background-color: whitesmoke;
+    color: #3b4c5b;
+}
+
+.smod-page-close-button:hover {
+    background-color: whitesmoke;
+    color: #c53c3c;
+}
+
+.smod-page-float-toggle-button:hover {
+    background-color: #c53c3c;
+    color: whitesmoke;
+}
+
+@media only screen and (max-width: 600px) {
+    .smod-page-float-toggle-button {
+        font-size: 12px !important;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.smod-page-float-toggle-button {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #3b4c5b;
+    color: whitesmoke;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 1;
+    display: block;
+    z-index: 1;
+}
+
+.smod-page-float-toggle-button-passive {
+    display: none;
+    opacity: 0;
+}
+
+.smod-page-float-toggle-button:before {
+    content: "\e1de";
+    font-family: "SAP-icons";
+}
+
+.smod-page-sidebar {
+    height: 100%;
+    width: 45px;
+    background-color: #394c5b;
+    position: fixed !important;
+    z-index: 5;
+    top: 45px;
+    box-shadow: 2px 0 5px 2px rgba(0, 0, 0, 0.16), 2px 2px 10px 5px rgba(0, 0, 0, 0.12);
+}
+
+.smod-page-sidebar-active {
+    left: 0;
+    top: 0;
+    display: block;
+    width: 300px;
+    box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.16), 2px 0 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.smod-page-sidebar-pinned .smod-page-sidebar-active {
+    left: 0;
+    top: 45px;
+    display: block;
+    width: 300px;
+    border-top: 2px solid #c7423a;
+    box-shadow: 3px 0 4px 0 rgba(0, 0, 0, 0.16), 2px 0 10px 0 rgba(0, 0, 0, 0.12);
+    animation: pineffect 0.5s ease;
+}
+
+.smod-page-overlay-active {
+    display: block;
+    cursor: pointer;
+}
+
+.smod-page-animate-left {
+    position: relative;
+    animation: animateleft 0.3s ease-in-out;
+}
+
+.smod-page-nav-container {
+    top: 45px;
+    left: 45px;
+    height: calc(100% - 45px);
+    width: calc(100% - 45px);
+    position: absolute;
+}
+
+.smod-page .sapContrast.sapMIBar.sapMFooter-CTX {
+    background-color: #384c5b !important;
+}
+
+.smod-page-sidebar-pinned.smod-page-sidebar-expanded .smod-page-nav-container {
+    left: 300px;
+    width: calc(100% - 300px);
+    animation: animateleft 0.3s ease-in-out;
+}
+
+.smod-page-sidebar-pinned .smod-page-nav-container {
+    left: 45px;
+    width: calc(100% - 45px);
+}
+
+.smod-page-sidebar-active .smod-page-sidebar-profile-container {
+    /* border-bottom: 2px solid #c7423a; */
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.smod-page-sidebar-profile-container {
+    background: #dedede;
+    display: none;
+    opacity: 0;
+    width: 100%;
+}
+
+.smod-page-sidebar-profile-container * {
+    font-size: 11px;
+    color: #2b2a2a;
+    font-family: "Roboto Condensed";
+    -webkit-font-smoothing: antialiased;
+}
+
+.smod-page-sidebar-profile-status {
+    display: flex;
+    align-items: baseline;
+    min-height: 100px;
+}
+
+.smod-page-sidebar-profile-title {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #a1abb2;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.smod-page-sidebar-profile-tabstrip {
+    min-height: 125px;
+    background-color: transparent;
+}
+
+.smod-page-sidebar-profile-details div {
+    padding-bottom: 2px;
+    font-size: 10px !important;
+}
+
+.smod-page-sidebar-profile-details-title {
+    font-weight: bold;
+}
+
+.smod-page-sidebar-profile-image {
+    display: table-cell;
+    width: 54px;
+    height: 54px;
+    margin: 10px;
+    border-radius: 50%;
+    padding: 2px;
+    border: 1px solid #394c5b;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .smod-page-sidebar-profile-image {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+.smod-side-bar-action-button {
+    font-size: 15px;
+    color: #2b2a2a;
+    transition: all 0.3s ease-in-out;
+}
+
+.smod-side-bar-action-menu:hover .smod-side-bar-action-button {
+    color: whitesmoke;
+}
+
+
+/* Style the tab */
+
+.smod-page-sidebar-profile-tab {
+    overflow: hidden;
+    background-color: whitesmoke;
+    /* border: 1px solid #f1f1f1; */
+    display: flex;
+}
+
+
+/* Style the buttons inside the tab */
+
+.smod-page-sidebar-profile-tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 5px;
+    transition: 0.3s;
+    font-size: 11px;
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+
+/* Change background color of buttons on hover */
+
+.smod-page-sidebar-profile-tab button:hover {
+    background-color: #ddd;
+}
+
+
+/* Create an active/current tablink class */
+
+.smod-page-sidebar-profile-tab button.active {
+    background-color: #ccc;
+    /* border: 1px solid #f1f1f1; */
+    border-bottom: 1px solid #c7423a;
+    font-weight: bold;
+    /* border: 1px solid #f1f1f1; */
+}
+
+
+/* Style the tab content */
+
+.smod-page-sidebar-profile-tabcontent-hidden {
+    display: none;
+}
+
+.smod-page-sidebar-profile-tabcontent {
+    -moz-animation: profileFadeEffect 0.3s;
+    -webkit-animation: profileFadeEffect 0.3s;
+    animation: profileFadeEffect 0.3s;
+}
+
+.smod-page-sidebar-profile-tabcontent-formstatus {
+    display: block;
+}
+
+.smod-page-sidebar-profile-tabcontent-1stappraiser,
+.smod-page-sidebar-profile-tabcontent-2ndappraiser {
+    display: none;
+}
+
+.smod-page-sidebar-profile-status-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+}
+
+.smod-page-sidebar-profile-status-table tr:nth-child(odd) {
+    background-color: #fff
+}
+
+.smod-page-sidebar-profile-status-table tr:nth-child(even) {
+    background-color: #f1f1f1
+}
+
+.smod-page-sidebar-profile-status-table tr {
+    height: 25px;
+}
+
+.smod-page-sidebar-profile-status-table td {
+    font-size: 10px !important;
+    padding: 3px;
+}
+
+.smod-page-sidebar-profile-status-table-row-label {
+    font-weight: bold;
+}
+
+.smod-page-sidebar-profile-info-content {
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    background-color: #f7f7f7;
+    background-image: linear-gradient(180deg, #f5f5f5 30%, #e6e6e6 50%, #b7bcc1 100%);
+}
+
+.smod-page-sidebar-item-container {
+    display: table;
+    position: relative;
+    width: 100%;
+    border-top: 2px solid #c7423a;
+}
+
+.smod-page-sidebar-active .smod-page-sidebar-item {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.smod-page-sidebar-item {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* overflow: hidden; */
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #3a4c5b;
+    transition: background-color 0.3s ease;
+    position: relative;
+    border-bottom: 1px solid #425767;
+}
+
+.smod-page-sidebar-item:hover {
+    background-color: #c7423a;
+}
+
+.smod-page-sidebar-item:hover .smod-page-sidebar-item-icon {
+    background-color: #ab3731;
+}
+
+.smod-page-sidebar-item-active {
+    background-color: #c7423a;
+}
+
+.smod-page-sidebar-item-active .smod-page-sidebar-item-icon {
+    background-color: #ab3731;
+}
+
+.smod-page-sidebar-active .smod-page-sidebar-item-tooltip {
+    display: none !important;
+}
+
+.smod-page-sidebar-item-tooltip {
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    min-width: 100px;
+    height: 30px;
+    background-color: rgba(56, 76, 91, 0.9);
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 0 5px;
+    position: absolute;
+    z-index: 5;
+    top: 10px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    left: 110%;
+    font-size: 12px;
+    font-family: "Roboto Condensed";
+}
+
+.smod-page-sidebar-item-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(56, 76, 91, 0.9) transparent transparent;
+}
+
+.smod-page-sidebar-item:hover .smod-page-sidebar-item-tooltip {
+    display: flex;
+    visibility: visible;
+    -webkit-animation: pulse 100ms cubic-bezier(0, 0, .2, 1) forwards;
+    -moz-animation: pulse 100ms cubic-bezier(0, 0, .2, 1) forwards;
+    animation: pulse 100ms cubic-bezier(0, 0, .2, 1) forwards
+}
+
+.smod-page-sidebar-item:hover .smod-page-sidebar-item-icon {
+    font-size: 20px;
+    /* padding: 0px 4px; */
+    color: #f5f5f5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.smod-page-sidebar-item-icon {
+    font-size: 20px;
+    color: #f5f5f5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.smod-page-sidebar-active .smod-page-sidebar-item-text {
+    font-size: 12px;
+    padding-left: 6px;
+    color: #f5f5f5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Roboto Condensed";
+    height: 45px;
+    width: calc(100% - 51px);
+    white-space: normal;
+    overflow: hidden;
+}
+
+.smod-page-sidebar-item-text {
+    display: none;
+}
+
+
+/* Fade in tabs */
+
+@-webkit-keyframes profileFadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes profileFadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animateleft {
+    from {
+        left: -100px;
+        opacity: 0
+    }
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes animateleft {
+    from {
+        left: -100px;
+        opacity: 0
+    }
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatepin {
+    from {
+        left: -100px;
+        opacity: 0
+    }
+    to {
+        right: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes animatepin {
+    from {
+        left: -100px;
+        opacity: 0
+    }
+    to {
+        left: 110%;
+        opacity: 1
+    }
+}
+
+.smod-page-animate-opacity {
+    animation: opac 0.6s;
+}
+
+@keyframes opac {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0
+    }
+    50% {
+        -webkit-transform: scale(.8);
+        transform: scale(.8)
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0
+    }
+    50% {
+        -webkit-transform: scale(.8);
+        transform: scale(.8)
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+@-webkit-keyframes pineffect {
+    0% {
+        top: 0;
+        opacity: 0.2;
+    }
+    100% {
+        top: 45px;
+        opacity: 1;
+    }
+}
+
+@keyframes pinmoveeffect {
+    0% {
+        font-size: 15px;
+    }
+    50% {
+        font-size: 13px;
+    }
+    100% {
+        font-size: 15px;
+    }
+}
+
+@keyframes pinmoveeffect {
+    0% {
+        font-size: 15px;
+    }
+    50% {
+        font-size: 13px;
+    }
+    100% {
+        font-size: 15px;
+    }
+}

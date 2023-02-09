@@ -1,0 +1,49 @@
+.smod-flip-card-container{
+	width: 100%;
+}
+
+.smod-no-flip-card {
+  background-color: transparent;
+  width: 265px;
+  height: 142px;
+}
+.smod-flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+  cursor: pointer; 
+  width: 265px;
+  height: 142px;
+}
+
+.smod-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.smod-flip-card:hover .smod-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.smod-flip-card-front, .smod-flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.smod-flip-card-front *, .smod-flip-card-back *{
+   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.smod-flip-card-front {
+  
+}
+
+.smod-flip-card-back {
+  transform: rotateY(180deg);
+}

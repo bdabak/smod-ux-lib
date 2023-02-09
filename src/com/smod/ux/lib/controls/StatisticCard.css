@@ -1,0 +1,111 @@
+.smod-statistic-card *{
+	box-sizing: border-box !important;
+}
+
+.smod-statistic-card {
+    border: 0;
+    border-radius: 6px;
+    color: #333;
+    background: #fff;
+    width: 190px;
+    height: 60px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    font-size: .875rem;
+}
+
+.smod-statistic-card-footer {
+	border-top: 1px solid #eee;
+	margin-top: 5px;
+	padding: 0;
+	padding-top: 5px;
+	margin: 0 15px 10px;
+	border-radius: 0;
+	justify-content: space-between;
+	align-items: center;
+	background-color: transparent;
+	border: 0;
+}
+.smod-statistic-card-header {
+	margin: 0 15px;
+    padding: 0;
+    position: relative;
+    color: #fff;
+    border-bottom: none;
+    background: transparent;
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.smod-statistic-card-icon{
+	border-radius: 3px;
+    background-color: #999;
+    padding: 5px;
+    position: absolute;
+    top: 12px;
+    float: left;
+    text-align: center;
+    width:35px;
+    height:35px;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(255,152,0,.4);
+}
+
+.smod-statistic-card-icon i{ 
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-style: normal;
+}
+
+.smod-statistic-card-title{
+	color: #999;
+	font-size: 11px;
+	margin: 0;
+	padding-top: 10px;
+	text-align: right;
+}
+
+.smod-statistic-card-value{
+	margin: 0;
+	font-size: 12px;
+	color: #3c4858;
+	line-height: 2rem;
+	text-align: right;
+}
+
+.smod-statistic-card-header-warning .smod-statistic-card-icon{
+    background: linear-gradient(60deg,#ffa726,#fb8c00);
+}
+
+.smod-statistic-card-header-primary .smod-statistic-card-icon{
+    background: linear-gradient(60deg,#ab47bc,#8e24aa);
+}
+
+.smod-statistic-card-header-info .smod-statistic-card-icon{
+    background: linear-gradient(60deg,#26c6da,#00acc1);
+}
+
+.smod-statistic-card-header-success .smod-statistic-card-icon{
+    background: linear-gradient(60deg,#66bb6a,#43a047);
+}
+.smod-statistic-card-header-danger .smod-statistic-card-icon{
+    background: linear-gradient(60deg,#ef5350,#e53935);
+}
+
+.smod-statistic-card-header-rose .smod-statistic-card-icon{
+    background: linear-gradient(60deg,#ec407a,#d81b60);
+}
+
+.smod-statistic-card-body-danger{
+	background-color:#ffe8e8;
+}
+.smod-statistic-card-body-success{
+	background-color:#e8ffe9;
+}
+
+.cbTinyMarginTop{
+	margin-top: 4px;
+}

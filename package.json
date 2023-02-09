@@ -1,0 +1,45 @@
+{
+    "name": "com.smod.ux.lib",
+    "version": "0.0.1",
+    "private": true,
+    "devDependencies": {
+        "@sap/di.code-validation.js": "1.1.6",
+        "@sap/di.code-validation.xml": "1.1.16",
+        "grunt": "1.0.1",
+        "grunt-run": "0.8.1",
+        "@ui5/cli": "^2.14.1",
+        "@sap/ux-ui5-tooling": "1",
+        "rimraf": "^3.0.2",
+        "ui5-task-flatten-library": "0.2.5"
+    },
+    "main": "Gruntfile.js",
+    "scripts": {
+        "clean": "rm -rf dist",
+        "build-for-deploy": "npm run build && npm run flatten && npm run clean-after-flatten",
+        "flatten": "cp -r dist/resources/com/smod/ux/lib/* dist && cp dist/resources/com/smod/ux/lib/.library dist && cp dist/resources/.Ui5RepositoryTextFiles dist",
+        "clean-after-flatten": "rm -rf dist/resources dist/test-resources",
+        "build_old": "ui5 build --include-task=generateManifestBundle generateCachebusterInfo ",
+        "build": "ui5 build -a --clean-dest --include-task=generateCachebusterInfo",
+        "deploy-config": "fiori add deploy-config",
+        "deploy": "npm run build && fiori deploy --config ui5-deploy.yaml && rimraf archive.zip",
+        "undeploy": "fiori undeploy --config ui5-deploy.yaml",
+        "deploy-test": "npm run build && fiori deploy --config ui5-deploy.yaml --testMode true"
+    },
+    "license": "UNLICENSED",
+    "dependencies": {
+        "@openui5/sap.ui.core": "",
+        "@openui5/themelib_sap_belize": ""
+    },
+    "sapux": true,
+    "keywords": [
+        "ui5",
+        "openui5",
+        "sapui5"
+    ],
+    "ui5": {
+        "dependencies": [
+            "@sap/ux-ui5-tooling",
+            "ui5-task-flatten-library"
+        ]
+    }
+}

@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700|Roboto:300,400,400i,700&subset=latin-ext');
+    .bd-side-nav-page .bd-side-nav a {
+        text-decoration: none;
+    }
+    
+    .bd-side-nav-icon-bar {
+        width: 100%;
+        background : -webkit-gradient( linear, left top, left bottom, color-stop(0, #C2DFFF), 
+        color-stop(1, #184c80));
+        height: 100%;
+    }
+    
+    .bd-side-nav {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #f0f0f0;
+        transition: all 0.1s;
+        -webkit-box-shadow: 2px 0px 5px 1px #888;
+        -moz-box-shadow: 2px 0px 5px 1px #888;
+        box-shadow: 2px 0px 5px 1px #888;
+    }
+    
+    .bd-side-nav:hover .bd-side-nav-toggler {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .bd-side-nav-toggle-button {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color : white;
+        border-bottom: 1px solid #e53324;
+        transition: all 0.3s ease;
+        height: 40px;
+        cursor: pointer;
+    }
+    
+    .bd-side-nav-toggle-button:hover {
+        /*background-color: #e53324;*/
+    }
+    
+    .bd-side-nav-toggle-button-image {
+        cursor: pointer;
+    }
+    
+    .bd-side-nav-toggle-button-image-expanded {
+        visibility: visible;
+        display: block;
+    }
+    
+    .bd-side-nav-toggle-button-image-collapsed {
+        visibility: hidden;
+        display: none;
+    }
+    
+    .bd-side-nav-toggle-button-icon,
+    .bd-side-nav-toggle-button .sapUiIcon {
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .bd-side-nav-collapsed {
+        width: 45px;
+    }
+    
+    .bd-side-nav-expanded {
+        width: 200px;
+    }
+    
+    .bd-side-nav-item-list {
+        border-top: 1px solid #e53324;
+        transition: all 0.3s ease;
+    }
+    
+    .bd-side-nav-item-list,
+    .bd-side-nav-item-sublist {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .bd-side-nav-item-list-hidden {
+        display: none;
+    }
+    
+    .bd-side-nav-item {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .bd-side-nav-item-link {
+        text-align: left;
+        padding-left: 10px;
+        transition: all 0.3s ease;
+        font-family: "Roboto Condensed", sans-serif;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        height: 1.75rem;
+        text-decoration: none;
+        color: #fff;
+        border-bottom: 1px solid #ababab;
+    }
+    
+    .bd-side-nav-item-level1 {
+        background-color: #2c5b8a;
+    }
+    
+    .bd-side-nav-item-level2 {
+        background-color: #717375;
+    }
+    
+    .bd-side-nav-item-level3 {
+        background-color: #969696;
+    }
+    
+    .bd-side-nav-item-level4 {
+        background-color: #cacaca;
+    }
+    
+    .bd-side-nav-item-text {
+        transition: all 0.2s ease;
+    }
+    
+    .bd-side-nav-item-level1 .bd-side-nav-item-text {
+        position: absolute;
+        left: 35px;
+        font-size: 11px;
+    }
+    
+    .bd-side-nav-item-level2 .bd-side-nav-item-text {
+        position: absolute;
+        left: 45px;
+        font-size: 11px;
+    }
+    
+    .bd-side-nav-item-level3 .bd-side-nav-item-text {
+        position: absolute;
+        left: 55px;
+        font-size: 11px;
+    }
+    
+    .bd-side-nav-item-link-active,
+    .bd-side-nav-item-link:hover {
+        background-color: #e53324;
+    }
+    
+    .bd-side-nav-item-icon::before {
+        font-size: 18px;
+        font-family: SAP-icons;
+        content: attr(data-sap-ui-icon-content);
+        speak: none;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    .bd-side-nav-item-caret {
+        position: absolute;
+        width: 2rem;
+        right: 5px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        transition: all 0.5s ease;
+        line-height: 2rem;
+        border-radius: 50%;
+    }
+    
+    .bd-side-nav-item-caret:hover {
+        background: rgba(53, 53, 53, 0.56);
+    }
+    
+    .bd-side-nav-item-caret::before {
+        font-size: 12px;
+        font-family: SAP-icons;
+        content: "\e1ef";
+        speak: none;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    @media screen and (max-height: 450px) {
+        .bd-side-nav {
+            padding-top: 15px;
+        }
+        .bd-side-nav a {
+            font-size: 18px;
+        }
+    }
+    
+    .bd-side-nav-profile-container {
+        background: #dedede;
+        display: inline-grid;
+        width: 100%;
+    }
+    
+    .bd-side-nav-profile-container * {
+        font-size: 11px;
+        color: #2b2a2a;
+        font-family: 'Roboto Condensed', sans-serif !important;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    .bd-side-nav-profile-info-content,
+    .bd-side-nav-profile-appraisee,
+    .bd-side-nav-profile-appraiser {
+        display: flex;
+        align-items: center;
+        min-height: 100px;
+    }
+    
+    .bd-side-nav-profile-status {
+        display: flex;
+        align-items: baseline;
+        min-height: 100px;
+    }
+    
+    .bd-side-nav-profile-title {
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f1f1f1;
+        border-bottom: 1px solid #a1abb2;
+        font-weight: bold;
+    }
+    
+    .bd-side-nav-profile-action-menu {
+        position: absolute;
+        right: 2px;
+    }
+    
+    .bd-side-nav-profile-action-menu .sapUiIcon {
+        font-family: 'SAP-icons', sans-serif !important;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .bd-side-nav-profile-tabstrip {
+        min-height: 125px;
+    }
+    
+    .bd-side-nav-profile-details div {
+        padding-bottom: 2px;
+        font-size: 10px !important;
+    }
+    
+    .bd-side-nav-profile-details-title {
+        font-weight: bold;
+    }
+    
+    .bd-side-nav-profile-image {
+        display: table-cell;
+        width: 54px;
+        height: 54px;
+        margin: 10px;
+        border-radius: 50%;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    @media (max-width: 768px) {
+        .bd-side-nav-profile-image {
+            width: 44px;
+            height: 44px;
+        }
+    }
+    
+    .bd-side-nav-page-content {
+        height: 100%;
+        width: calc(100% - 260px);
+        left: 250px;
+        margin-left: 5px;
+        margin-right: 5px;
+        display: block;
+        position: relative;
+    }
+    
+    .bd-side-nav-page {
+        width: 100%;
+        position: relative;
+        height: 100%;
+    }
+    
+    .bd-side-nav-page-content * {
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .bd-side-nav-item-link .bd-side-nav-item-tooltip {
+        display: none;
+        position: absolute;
+        background-color: #2c5b8a;
+        padding: 8px 15px;
+        border-radius: 3px;
+        left: 255px;
+        opacity: 0;
+        visibility: hidden;
+        font-size: 11px;
+        letter-spacing: .5px;
+        width: 150px;
+        text-align: center;
+        z-index: 10;
+        transition: opacity 1s ease;
+    }
+    
+    .bd-side-nav-item-link .bd-side-nav-item-tooltip::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent #2c5b8a transparent transparent;
+    }
+    
+    .bd-side-nav-item-link:hover .bd-side-nav-item-tooltip {
+        visibility: visible;
+        opacity: 0.9;
+    }
+    /* Style the tab */
+    
+    .bd-side-nav-profile-tab {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        border: 1px solid #dedede;
+        display: flex;
+    }
+    /* Style the buttons inside the tab */
+    
+    .bd-side-nav-profile-tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 5px 5px;
+        transition: 0.3s;
+        font-size: 11px;
+        width: 100%;
+        border-bottom: 1px solid transparent;
+    }
+    /* Change background color of buttons on hover */
+    
+    .bd-side-nav-profile-tab button:hover {
+        background-color: #ddd;
+    }
+    /* Create an active/current tablink class */
+    
+    .bd-side-nav-profile-tab button.active {
+        background-color: #ccc;
+        border-bottom: 1px solid #e53324;
+        font-weight: bold;
+    }
+    /* Style the tab content */
+    
+    .bd-side-nav-profile-tabcontent-hidden {
+        display: none;
+    }
+    
+    .bd-side-nav-profile-tabcontent {
+        -moz-animation: profileFadeEffect 1s;
+        -webkit-animation: profileFadeEffect 1s;
+        animation: profileFadeEffect 1s;
+    }
+    
+    .bd-side-nav-profile-tabcontent-formstatus {
+        display: block;
+    }
+    
+    .bd-side-nav-profile-tabcontent-1stappraiser,
+    .bd-side-nav-profile-tabcontent-2ndappraiser {
+        display: none;
+    }
+    
+    .bd-side-nav-profile-status-table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        display: table;
+    }
+    
+    .bd-side-nav-profile-status-table tr:nth-child(odd) {
+        background-color: #fff
+    }
+    
+    .bd-side-nav-profile-status-table tr:nth-child(even) {
+        background-color: #f1f1f1
+    }
+    
+    .bd-side-nav-profile-status-table tr {
+        height: 25px;
+    }
+    
+    .bd-side-nav-profile-status-table td {
+        font-size: 10px !important;
+        padding: 3px;
+    }
+    
+    .bd-side-nav-profile-status-table-row-label {
+        font-weight: bold;
+    }
+    /* Fade in tabs */
+    
+    @-webkit-keyframes profileFadeEffect {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes profileFadeEffect {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @-webkit-keyframes buttonRotateEffect {
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+    
+    @keyframes buttonRotateEffect {
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+    
+    .bd-side-nav-toggler {
+        visibility: hidden;
+        opacity: 0;
+        height: 40px;
+        width: 19px;
+        position: absolute;
+        top: calc(50% - 40px);
+        right: -20px;
+        background-color: #2c5b8a;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 5px;
+        box-shadow: 1px 0px 4px 0px #888;
+        cursor: pointer;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        z-index: -1;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .bd-side-nav-toggler::before {
+        font-family: SAP-icons;
+        content: attr(data-sap-ui-icon-content);
+        color: #f2f2f3;
+        -webkit-font-smoothing: antialiased;
+        transition: all 0.5s ease;
+        width: 10px;
+        font-size: 13px;
+    }
+    
+    .bd-side-nav-toggler-flip::before {
+        transform: rotate(180deg);
+        transition: all 0.5s ease;
+    }
+    
+    .bd-side-nav-footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    .bd-side-nav-back-button {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2f3c48;
+        position: absolute;
+        bottom: 0;
+        cursor: pointer;
+        transition: 0.3s ease;
+        border-top: 1px solid #e73d22;
+    }
+    
+    .bd-side-nav-back-button:hover {
+        background-color: #e73d22;
+        border-top: 1px solid #f1f1f1;
+    }
+    
+    .bd-side-nav-back-button:hover:before {
+        color: white;
+    }
+    
+    .bd-side-nav-back-button:before {
+        font-family: "SAP-icons";
+        content: "\e1eb";
+        transition: 0.3s ease;
+        color: #f1f1f1;
+    }
+    
+    .bd-side-nav-item-link-center {
+        padding: 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .bd-side-nav-item-link-left {
+        padding-left: 10px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    
+    .bd-side-nav-display-block {
+        display: block;
+    }
+    
+    .bd-side-nav-display-hide {
+        display: none;
+    }

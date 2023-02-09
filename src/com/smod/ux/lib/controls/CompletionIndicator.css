@@ -1,0 +1,12 @@
+.smod-completion-indicator-container{
+	align-items:center;
+	justify-content:center;
+	display: flex;
+	box-sizing: border-box;
+}
+
+.smod-completion-indicator-graph-container{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}

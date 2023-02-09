@@ -1,0 +1,94 @@
+.smod-budget-indicator-container{
+	align-items:center;
+	width: 250px;
+	height: 125px;
+	border-radius: 4px;
+	background-color: #fcfcfc;
+	box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+.smod-budget-color-emphasized{
+	color: #ffc107 !important;
+}
+.smod-budget-color-emphasized-dark{
+	color: #FF9800 !important;
+}
+.smod-budget-color-accept{
+	color: #28a745 !important;
+}
+.smod-budget-color-accept-dark{
+	color: #009688 !important;
+}
+.smod-budget-color-reject{
+	color: #dc3545 !important;
+}
+.smod-budget-color-reject-dark{
+	color: #b12835 !important;
+}
+
+.smod-budget-indicator-graph-container{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    min-height: 120px;
+}
+
+.smod-budget-indicator-body{
+	display: flex;
+	width: calc(100% - 10px);
+	position: absolute;
+	align-items: center;
+	top: 20px;
+	left: 0;
+}
+
+.smod-budget-indicator-value-container{
+    position: relative;
+    display: flex;
+    text-align:center;
+    align-items:center;
+    width: 55%;
+    height: 100%;
+}
+
+.smod-budget-indicator-value-rows{
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content: center;
+	width: 95%;
+	height: 100%;
+}
+
+.smod-budget-indicator-title{
+	line-height: 1.7rem;
+	font-size: 15px;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+}
+
+.smod-budget-indicator-unit{
+	font-size: 15px;
+	display:none;
+}
+
+.smod-budget-indicator-actual-value{
+	font-size: 15px;
+	color: green;
+	padding: 5px;
+}
+
+.smod-budget-indicator-max-value{
+	font-size: 13px;
+	padding: 5px;
+}
+.smod-budget-indicator-separator{
+	padding: 2px 0;
+	width: calc(100% - 15px);
+	border-top: 1px solid #cccccc;
+}

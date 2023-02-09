@@ -1,0 +1,17 @@
+.smod-completion-card-container{
+    justify-content:center;
+	align-items:center;
+	display: inline-flex;
+	box-sizing: border-box;
+	border-radius: 4px;
+	width:50px;
+	cursor:pointer;
+}
+
+.smod-completion-card-text{
+    padding:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:11px;
+}

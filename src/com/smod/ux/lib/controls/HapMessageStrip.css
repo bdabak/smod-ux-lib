@@ -1,0 +1,51 @@
+.hapMessageStripMainDiv {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.hapMessageTypeNone {
+    color: #535d67;
+    background-color: #e5e5e5;
+    border-color: #666666;
+}
+.hapMessageTypeNone .hapMessageStripIcon{
+	color: #535d67;
+}
+
+.hapMessageTypeSuccess {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.hapMessageTypeSuccess .hapMessageStripIcon{
+	color: #3c763d;
+}
+
+.hapMessageTypeError {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.hapMessageTypeError .hapMessageStripIcon{
+	color: #a94442;
+}
+
+.hapMessageTypeWarning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.hapMessageTypeWarning .hapMessageStripIcon{
+	color: #8a6d3b;
+}
+
+.hapMessageStripContentDiv{
+	display: flex;
+	align-items:center;
+}

@@ -1,0 +1,190 @@
+.hapIndicatorPanelDiv {
+    -webkit-box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    padding: 4px;
+    min-width: 250px;
+    margin: 5px;
+    border: 1px solid #928d8d2e;
+}
+
+.hapIndicatorPanelIconExpanded {
+    transition: all 0.5s ease;
+}
+
+.hapIndicatorPanelIconCollapsed {
+    transform: rotate(-90deg);
+    transition: all 0.5s ease;
+}
+
+.hapIndicatorPanelDivPositive {
+    color: #155724 !important;
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+}
+
+.hapIndicatorPanelDivPositive .sapMSLI {
+    background-color: #bed6c3 !important;
+}
+
+.hapIndicatorPanelDivEmphasized {
+    color: #004085!important;
+    background-color: #b7c4d2 !important;
+    border-color: #9dadbf !important
+}
+
+.hapIndicatorPanelDivEmphasized .sapMSLI {
+    background-color: #99aec3 !important;
+    border-bottom-color: #4682b438
+}
+
+.hapIndicatorPanelDivNegative {
+    color: #721c24 !important;
+    background-color: #e5c1c4 !important;
+    border-color: #cca5a9 !important
+}
+
+.hapIndicatorPanelDivNegative .sapMSLI {
+    background-color: #d39a9f !important
+}
+
+.hapIndicatorPanelDivCritical {
+    color: #856404!important;
+    background-color: #fff3cd !important;
+    border-color: #ffeeba !important
+}
+
+.hapIndicatorPanelDiv:hover {
+    box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, .5)
+}
+
+.hapIndicatorPanelHeaderDesignPositive {
+    color: #326f3f !important;
+    background-color: #d4edda !important;
+    border-color: #a3bfa9 !important
+}
+
+.hapIndicatorPanelHeaderDesignEmphasized {
+    color: #38597f !important;
+    background-color: #b7c4d2 !important;
+    border-color: #7794b5 !important
+}
+
+.hapIndicatorPanelHeaderDesignNegative {
+    color: #84494e !important;
+    background-color: #e5c1c4 !important;
+    border-color: #9e5b61 !important
+}
+
+.hapIndicatorPanelHeaderDesignCritical {
+    color: #856404!important;
+    background-color: #fff3cd !important;
+    border-color: #ffeeba !important
+}
+
+.hapIndicatorPanelListDiv {}
+
+.hapIndicatorPanelHeaderTextNoBorder {
+    border-bottom: 0;
+    transition: all 0.5s ease;
+}
+
+.hapIndicatorPanelHeaderTextHasBorder {
+    border-bottom: 3px solid;
+    transition: all 0.5s ease;
+}
+
+.hapIndicatorPanelIcon {
+    font-family: SAP-icons;
+    font-size: 13px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.hapIndicatorPanelIcon::before {
+    content: "\e1e2";
+}
+
+.hapIndicatorPanelHeaderTextMain::after {
+    font-family: SAP-icons;
+    content: "\e1c3";
+    font-size: 20px;
+    color: #444a4e;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.hapIndicatorPanelHeaderText {
+    color: #356187;
+    font-size: 15px;
+    /*text-align: center;*/
+    padding: 2px 0;
+    height: 30px;
+    display: -webkit-flex;
+    /* Safari */
+    -webkit-align-items: center;
+    /* Safari 7.0+ */
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.hapIndicatorPanelCursor {
+    cursor: pointer;
+}
+
+.hapIndicatorPanelHeaderText .hapIndicatorPanelHeaderAlignCenter {
+    margin: 0 auto;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #9ca79e;
+}
+
+
+/*.hapIndicatorPanelHeaderText .hapIndicatorPanelHeaderAlignCenter::after {
+    content: "\e05c";
+    font-family: SAP-icons;
+    margin-left: 10px;
+    text-align: right;
+}*/
+
+.hapIndicatorPanelHeaderText .hapIndicatorPanelHeaderAlignLeft {
+    margin: 0 1px;
+}
+
+.hapIndicatorPanelHeaderAlignCenter .hapTooltipText {
+    font-weight: normal;
+    text-shadow: none;
+    visibility: hidden;
+    display: block;
+    width: 270px;
+    background-color: #2f3c48;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #667084;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 2;
+    margin-top: 8px;
+    margin-left: -80px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.hapIndicatorPanelHeaderAlignCenter .hapTooltipText::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #667084 transparent;
+}
+
+.hapIndicatorPanelHeaderTextMain:hover .hapTooltipText {
+    visibility: visible;
+    display: block;
+    opacity: 0.9;
+}
