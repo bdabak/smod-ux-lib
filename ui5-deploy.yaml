@@ -14,10 +14,10 @@ builder:
       afterTask: generateCachebusterInfo
       configuration:
         target:
-          url: http://fioritest.sedefshipyard.com:8000
-          client: "100"
+          url: http://tks0154.thy.com:8000
+          client: "300"
         app:
           name: ZSMOD_UX_LIB_V2
-          description: SMOD UX Lib v2 - 2023
-          package: ZHR
-          transport: SFDK900214
+          description: SMOD UX Kütüphanesi - V2
+          package: ZHR_UX
+          transport: D28K904489

@@ -3,3 +3,4 @@
 ^.*\.less$
 ^.*\.library$
 ^.*\.theming$
+^.*\.map$
