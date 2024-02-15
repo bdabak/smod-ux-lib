@@ -3,12 +3,12 @@
     "version": "0.0.1",
     "private": true,
     "devDependencies": {
-        "@sap/di.code-validation.js": "1.1.6",
-        "@sap/di.code-validation.xml": "1.1.16",
+        "@sap/di.code-validation.js": "^1.1.14",
+        "@sap/di.code-validation.xml": "^1.1.29",
+        "@sap/ux-ui5-tooling": "1",
+        "@ui5/cli": "^3.3.0",
         "grunt": "1.0.1",
         "grunt-run": "0.8.1",
-        "@ui5/cli": "^2.14.1",
-        "@sap/ux-ui5-tooling": "1",
         "rimraf": "^3.0.2",
         "ui5-task-flatten-library": "0.2.5"
     },

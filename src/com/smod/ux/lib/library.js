@@ -47,7 +47,7 @@ sap.ui.define(
         "com.smod.ux.lib.controls.ComparisonTableCell",
         "com.smod.ux.lib.controls.CustomSideBar",
         "com.smod.ux.lib.controls.CustomSideBarStatus",
-        "com.smod.ux.lib.controls.CustomSideProfile",
+        "com.smod.ux.lib.controls.CustomSideBarProfile",
         "com.smod.ux.lib.controls.HapIndicatorPanel",
         "com.smod.ux.lib.controls.HapMessageStrip",
         "com.smod.ux.lib.controls.SmodPage",
@@ -69,6 +69,9 @@ sap.ui.define(
         "com.smod.ux.lib.controls.StarRatingItem",
         "com.smod.ux.lib.controls.Switch",
         "com.smod.ux.lib.controls.TriggerEvent",
+        "com.smod.ux.lib.controls.RatingRange",
+        "com.smod.ux.lib.controls.FlipButton",
+        "com.smod.ux.lib.controls.FlipButtonFace",
       ],
       elements: [],
     });

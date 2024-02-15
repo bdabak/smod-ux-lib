@@ -36,14 +36,14 @@
         align-items: center;
         text-align: center;
         background-color : white;
-        border-bottom: 1px solid #e53324;
+        border-bottom: 1px solid #da1933;
         transition: all 0.3s ease;
         height: 40px;
         cursor: pointer;
     }
     
     .bd-side-nav-toggle-button:hover {
-        /*background-color: #e53324;*/
+        /*background-color: #da1933;*/
     }
     
     .bd-side-nav-toggle-button-image {
@@ -75,7 +75,7 @@
     }
     
     .bd-side-nav-item-list {
-        border-top: 1px solid #e53324;
+        border-top: 1px solid #da1933;
         transition: all 0.3s ease;
     }
     
@@ -149,7 +149,7 @@
     
     .bd-side-nav-item-link-active,
     .bd-side-nav-item-link:hover {
-        background-color: #e53324;
+        background-color: #da1933;
     }
     
     .bd-side-nav-item-icon::before {
@@ -359,7 +359,7 @@
     
     .bd-side-nav-profile-tab button.active {
         background-color: #ccc;
-        border-bottom: 1px solid #e53324;
+        border-bottom: 1px solid #da1933;
         font-weight: bold;
     }
     /* Style the tab content */
