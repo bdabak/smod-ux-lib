@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
-.appFeedBackDialog .sapMDialogScroll{
-    padding: 0 !important;
+.appFeedBackDialog .sapMDialogScroll {
+  padding: 0 !important;
 }
-.appFeedBackDialog{
-
-    border-radius: 20px !important;;
-    border: 1px solid whitesmoke !important;;
-    box-shadow: 0px 2px 15px 6px rgb(32 34 37 / 42%) , 0 1.25rem 5rem 0 rgb(193 202 211 / 30%) !important;
-    
+.appFeedBackDialog {
+  border-radius: 20px !important;
+  border: 1px solid whitesmoke !important;
+  box-shadow: 0px 2px 15px 6px rgb(32 34 37 / 42%),
+    0 1.25rem 5rem 0 rgb(193 202 211 / 30%) !important;
 }
 .tk-app-feedback {
   height: 100%;
@@ -41,6 +40,7 @@
   justify-content: space-between;
   margin-left: 20px;
   margin-right: 20px;
+  padding-bottom: 12px;
 }
 .tk-app-feedback .accordion-footer-img {
   display: flex;
@@ -73,6 +73,10 @@
   box-shadow: inset 0px 2px 10px #0000001f;
   border: 1px solid #e1e1e1;
 }
+.tk-app-feedback textarea:focus {
+  outline: none !important;
+  border-color: #d90426;
+}
 .tk-app-feedback details .tk-app-feedback_container {
   height: auto;
   display: flex;
@@ -84,7 +88,7 @@
   overflow-y: hidden;
 }
 .tk-app-feedback details .tk-app-feedback_container > * + * {
-  margin-top: 1.5em;
+  margin-top: 0.8em;
 }
 .tk-app-feedback details + details {
   margin-top: 0.5rem;
@@ -113,13 +117,19 @@
 .tk-app-feedback small {
   color: #888;
 }
+
+/*New*/
+.tk-app-feedback .actions {
+  display: flex;
+}
+
 .tk-app-feedback .arrow {
   width: 40px;
 }
 .tk-app-feedback .arrow:before {
   top: 50%;
   content: "\279C";
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */ /* New */
   right: 14px;
   width: 30px;
   height: 30px;
@@ -133,6 +143,28 @@
   font-size: 20px;
   transform: rotate(270deg);
 }
+
+/* New */
+.tk-app-feedback .tk-app-feedback_close {
+  width: 40px;
+}
+/* New */
+.tk-app-feedback .tk-app-feedback_close:before {
+  top: 50%;
+  content: "\2716";
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  background-color: darkgray;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
 .tk-app-feedback details[open] summary {
   background-color: #eee;
   border-bottom-left-radius: 0px;
@@ -144,6 +176,14 @@
   font-size: 20px;
   transform: rotate(90deg);
 }
+
+/* New */
+.tk-app-feedback details[open] .tk-app-feedback_close:before {
+  content: "\2716";
+  color: white;
+  font-size: 20px;
+}
+
 .tk-app-feedback summary:hover {
   background-color: #eee;
   /* border-radius: 20px; */
@@ -171,6 +211,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 76%;
+  /* New */
+  cursor: pointer;
 }
 .tk-app-feedback input:not(:checked) ~ label:hover,
 .tk-app-feedback input:not(:checked) ~ label:hover ~ label {
@@ -184,24 +226,30 @@
 .tk-app-feedback input#rate-5:checked ~ label {
   color: #fe7;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%221em%22%20viewBox%3D%220%200%20576%20512%22%3E%3Cstyle%3Esvg%7Bfill%3A%23ffee77%7D%3C%2Fstyle%3E%3Cpath%20d%3D%22M259.3%2017.8L194%20150.2%2047.9%20171.5c-26.2%203.8-36.7%2036.1-17.7%2054.6l105.7%20103-25%20145.5c-4.5%2026.3%2023.2%2046%2046.4%2033.7L288%20439.6l130.7%2068.7c23.2%2012.2%2050.9-7.4%2046.4-33.7l-25-145.5%20105.7-103c19-18.5%208.5-50.8-17.7-54.6L382%20150.2%20316.7%2017.8c-11.7-23.6-45.6-23.9-57.4%200z%22%2F%3E%3C%2Fsvg%3E");
-  text-shadow: 0 0 21px #0000008f;
-  filter: drop-shadow(0 0 9px #0000008f);
+  text-shadow: 0 0 21px #00000080;
+  filter: drop-shadow(0 0 6px #00000080);
 }
+
 .tk-app-feedback #rate-1:checked ~ form header:before {
   content: "Çok kötü";
 }
+
 .tk-app-feedback #rate-2:checked ~ form header:before {
   content: "Kötü";
 }
+
 .tk-app-feedback #rate-3:checked ~ form header:before {
   content: "İdare eder";
 }
+
 .tk-app-feedback #rate-4:checked ~ form header:before {
   content: "İyi";
 }
+
 .tk-app-feedback #rate-5:checked ~ form header:before {
   content: "Çok iyi";
 }
+
 .tk-app-feedback .input[type="button"] {
   display: inline-block;
   background: #8bc34a;
@@ -217,14 +265,26 @@
   border: 0;
   transition: border-radius linear 0.05s, width linear 0.05s;
 }
+
 .tk-app-feedback input[type="button"]:focus {
   outline: 0;
 }
+
 .tk-app-feedback .submit {
   display: flex;
   justify-content: center;
-  padding-bottom: 10px;
 }
+
+.tk-app-feedback .prepared-comment-item {
+  border-radius: 4px;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+  color: #606060;
+  border: 1px solid #404040;
+  text-align: center;
+}
+
 .tk-app-feedback .submit-button {
   appearance: none;
   border-radius: 15px;
@@ -233,17 +293,16 @@
   line-height: normal;
   margin: 0;
   min-height: 40px;
-  min-width: 0;
+  min-width: 85px;
   outline: none;
   text-align: center;
   text-decoration: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   will-change: transform;
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
-  width: 85px;
   height: 40px;
   padding: 4px 9px;
   font-weight: 600;
@@ -258,42 +317,53 @@
   color: #000;
   box-shadow: 0px 8px 31px rgb(232 109 45 / 9%);
 }
+
 .tk-app-feedback .submit-button:disabled {
   pointer-events: none;
 }
+
 .tk-app-feedback .submit-button:hover {
   background-color: #1a1a1a;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
+
 .tk-app-feedback .submit-button:active {
   box-shadow: none;
   transform: translateY(0);
 }
+
 .tk-app-feedback .tk-app-feedback_container-title {
   margin-top: 20px;
   font-size: 12px;
   text-align: center;
 }
+
 .tk-app-feedback .timer {
   display: inline-block;
+  width: 80px;
 }
+
 .tk-app-feedback .base-timer {
   position: relative;
   width: 40px;
   height: 40px;
 }
+
 .tk-app-feedback .base-timer__svg {
   transform: scaleX(-1);
 }
+
 .tk-app-feedback .base-timer__circle {
   fill: none;
   stroke: none;
 }
+
 .tk-app-feedback .base-timer__path-elapsed {
   stroke-width: 7px;
   stroke: grey;
 }
+
 .tk-app-feedback .base-timer__path-remaining {
   stroke-width: 7px;
   stroke-linecap: round;
@@ -301,15 +371,19 @@
   fill-rule: nonzero;
   stroke: currentColor;
 }
+
 .tk-app-feedback .base-timer__path-remaining.green {
   color: rgb(65, 184, 131);
 }
+
 .tk-app-feedback .base-timer__path-remaining.orange {
   color: orange;
 }
+
 .tk-app-feedback .base-timer__path-remaining.red {
   color: red;
 }
+
 .tk-app-feedback .base-timer__label {
   position: absolute;
   width: 40px;
@@ -320,17 +394,135 @@
   justify-content: center;
   font-size: 12px;
 }
+
 @media only screen and (max-width: 1120px) {
   .tk-app-feedback .tk-app-feedback_accordion {
     width: 90%;
     overflow: hidden;
   }
+
   .tk-app-feedback textarea {
-    width: 400px;
+    width: 40vw;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  .tk-app-feedback textarea {
-    width: 300px;
+
+/*New*/
+.tk-app-feedback .tk-app-feedback_prepared-comments {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+/* for success & error */
+/*New*/
+.tk-app-feedback .tk-app-feedback_response-area {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*New*/
+.tk-app-feedback .tk-app-feedback_response-title {
+  font-size: 1rem;
+  text-align: center;
+  padding: 0 0.6rem;
+}
+/*New*/
+.tk-app-feedback .tk-app-feedback_checkmark_circle_success {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 5px;
+  stroke-miterlimit: 10;
+  stroke: #00c851;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+/*New*/
+.tk-app-feedback .tk-app-feedback_checkmark_circle_error {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 5px;
+  stroke-miterlimit: 10;
+  stroke: #ff4444;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+/*New*/
+.tk-app-feedback .tk-app-feedback_checkmark {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 5px;
+  stroke-miterlimit: 10;
+  margin: 20px auto;
+}
+/*New*/
+.tk-app-feedback .tk-app-feedback_checkmark.tk-app-feedback_success {
+  box-shadow: inset 0px 0px 0px #00c851;
+  animation: fillSuccess 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+  stroke: #00c851;
+}
+/*New*/
+.tk-app-feedback .tk-app-feedback_checkmark.tk-app-feedback_error {
+  box-shadow: inset 0px 0px 0px #ff4444;
+  animation: fillError 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+  stroke: #ff4444;
+}
+/*New*/
+.tk-app-feedback .tk-app-feedback_checkmark_check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) 0.9s forwards;
+}
+/*New*/
+.tk-app-feedback .tk-app-feedback_progress {
+  transform: rotate(-90deg);
+  stroke: black;
+}
+/*New*/
+.tk-app-feedback .tk-app-feedback_progress circle {
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+  animation: dash 1s infinite;
+}
+/*New*/
+@keyframes dash {
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -130;
+  }
+}
+/*New*/
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+/*New*/
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+/*New*/
+@keyframes fillSuccess {
+  100% {
+    box-shadow: inset 0px 0px 0px 75px #00c851;
+  }
+}
+/*New*/
+@keyframes fillError {
+  100% {
+    box-shadow: inset 0px 0px 0px 75px #ff4444;
   }
 }

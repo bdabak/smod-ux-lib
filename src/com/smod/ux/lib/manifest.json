@@ -73,7 +73,11 @@
           "com.smod.ux.lib.controls.StarRating",
           "com.smod.ux.lib.controls.StarRatingItem",
           "com.smod.ux.lib.controls.Switch",
-          "com.smod.ux.lib.controls.TriggerEvent"
+          "com.smod.ux.lib.controls.TriggerEvent",
+          "com.smod.ux.lib.controls.AppFeedbackDialog",
+          "com.smod.ux.lib.controls.AppFeedback",
+          "com.smod.ux.lib.controls.AppFeedbackTimer",
+          "com.smod.ux.lib.controls.AppFeedbackComment"
         ],
         "elements": [],
         "types": [],

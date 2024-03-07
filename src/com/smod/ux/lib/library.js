@@ -72,6 +72,7 @@ sap.ui.define(
         "com.smod.ux.lib.controls.AppFeedbackDialog",
         "com.smod.ux.lib.controls.AppFeedback",
         "com.smod.ux.lib.controls.AppFeedbackTimer",
+        "com.smod.ux.lib.controls.AppFeedbackComment",
         "com.smod.ux.lib.controls.BusyDialog",
         "com.smod.ux.lib.controls.BusyIndicator",
       ],

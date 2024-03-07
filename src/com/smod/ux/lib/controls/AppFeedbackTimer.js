@@ -16,10 +16,9 @@ sap.ui.define(["sap/ui/core/Control"], function (Control) {
         aggregations: {},
         events: {},
       },
-     
       renderer: function(oRM, oControl){
         var remainingPathColor = oControl.getRemainingPathColor();
-        var timeLeft = oControl.getTimeLeft();
+        var timeLeft = oControl.formatTime(oControl.getTimeLeft());
   
         //--<div class="base-timer">
         oRM
@@ -72,7 +71,22 @@ sap.ui.define(["sap/ui/core/Control"], function (Control) {
   
         .close("div");
         //--<div class="base-timer">
-      }
+      },
+      
+      formatTime: function (time) {
+        var minutes = Math.floor(time / 60);
+        var seconds = time % 60;
+
+        if (seconds < 10) {
+            seconds = `0${seconds}`;
+        }
+
+        if(isNaN(minutes) || isNaN(seconds)){
+          return "";
+        }
+        
+        return `${minutes}:${seconds}`;
+      },
   
     });
 
