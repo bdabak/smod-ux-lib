@@ -1,0 +1,6 @@
+^.*\.control$
+^.*\.json$
+^.*\.less$
+^.*\.library$
+^.*\.theming$
+^.*\.map$

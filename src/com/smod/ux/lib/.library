@@ -4,7 +4,7 @@
     <vendor>SAP SE</vendor>
     <version>2.0.0</version>
     <copyright>${copyright}</copyright>
-    <title>>SMOD UX Library</title>
+    <title>SMOD UX Library</title>
     <documentation>SMOD UX library</documentation>
 	<dependencies>
 		<dependency>

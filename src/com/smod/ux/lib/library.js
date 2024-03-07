@@ -48,6 +48,7 @@ sap.ui.define(
         "com.smod.ux.lib.controls.CustomSideBar",
         "com.smod.ux.lib.controls.CustomSideBarStatus",
         "com.smod.ux.lib.controls.CustomSideBarProfile",
+        "com.smod.ux.lib.controls.CustomSideBarProfile",
         "com.smod.ux.lib.controls.HapIndicatorPanel",
         "com.smod.ux.lib.controls.HapMessageStrip",
         "com.smod.ux.lib.controls.SmodPage",
